@@ -62,7 +62,7 @@
 function generateRandomHexCode() {
     const characters = '0123456789abcdef';
     let result = '';
-    for (let i = 0; i < 6; i++) {
+    for (let i = 0; i < 4; i++) {
         result += characters.charAt(Math.floor(Math.random() * characters.length));
     }
     document.getElementById('randomHexCode').innerText = result;
