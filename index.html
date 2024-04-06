@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>iOS Style UI</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    background-color: #f2f2f7;
+    color: #000;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+
+  .container {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    width: 300px;
+  }
+
+  input[type="text"] {
+    width: calc(100% - 24px);
+    padding: 12px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    background-color: #f2f2f7;
+  }
+
+  button {
+    background-color: #007aff;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    width: 100%;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #005ecb;
+  }
+
+  label {
+    display: block;
+    margin-top: 16px;
+    text-align: center;
+    background-color: #f2f2f7;
+    padding: 12px;
+    border-radius: 10px;
+  }
+</style>
+<script>
+function generateRandomHexCode() {
+    const characters = '0123456789abcdef';
+    let result = '';
+    for (let i = 0; i < 6; i++) {
+        result += characters.charAt(Math.floor(Math.random() * characters.length));
+    }
+    document.getElementById('randomHexCode').innerText = result;
+    document.getElementById('randomHexCodeWithSuffix').innerText = result + 'ad1';
+}
+</script>
+</head>
+<body>
+
+<div class="container">
+  <input type="text" id="input1" placeholder="Eingabefeld 1"><br>
+  <input type="text" id="input2" placeholder="Eingabefeld 2"><br>
+  <button onclick="generateRandomHexCode()">Generate</button><br>
+  <label id="randomHexCode">0000</label><br>
+  <label id="randomHexCodeWithSuffix">0000</label>
+</div>
+
+</body>
+</html>
